@@ -1,0 +1,99 @@
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  overflow-y: hidden;
+  .site-content {
+    $max-row-width: 500px;
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    max-width: $website-width;
+    .main-grid {
+      display: grid;
+
+      grid-auto-rows: auto;
+      grid-template-columns: 100%;
+      @include padding-spacing(medium, all);
+      padding-top: $spacing-xx-large;
+      @include apply-to(md) {
+        padding: 0;
+        padding-top: 8rem;
+        grid-template-rows: max(calc(70vh - 8rem), #{$max-row-width}) auto;
+        grid-template-columns: 45% 55%;
+      }
+      .title-content {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        overflow: hidden;
+
+      }
+      .text-content {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        @include padding-spacing(medium, top);
+        @include apply-to(md) {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 1;
+        }
+      }
+      .card-content {
+        @include apply-to(md) {
+          grid-row-start: 1;
+          grid-row-end: 3;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          @include padding-spacing(large, all);
+        }
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        @include padding-spacing(large, top);
+        @include apply-to(md) {
+          padding-right: 0;
+        }
+        .images-container {
+          position: relative;
+          display: none;
+          @include apply-to(md) {
+            display: inherit;
+          }
+          @include padding-spacing(medium, bottomw);
+
+          @include apply-to(md) {
+            @include padding-spacing(large, bottom);
+          }
+          img.auto {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .card {
+          color: $black;
+          background-color: $white;
+          border-radius: .5rem;
+          @include padding-spacing(medium, all);
+          @include basic-box-shadow();
+          overflow: hidden;
+          .form-container {
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.hubspot-link__container {
+  display: none !important;
+}

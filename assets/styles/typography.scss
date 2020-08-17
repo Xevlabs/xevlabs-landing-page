@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Roboto:wght@400&display=swap');
+h1 {
+  font-size: map-get($h1-font-size, mobile);
+  @include apply-to(md) {
+    font-size: map-get($h1-font-size, desktop);
+  };
+  text-transform: uppercase;
+  font-family: "Nunito", Verdana, sans-serif;
+  color: $title-base-color;
+  line-height: $large-line-height;
+}
+h2 {
+  font-size: map-get($h2-font-size, mobile);
+  @include apply-to(md) {
+    font-size: map-get($h2-font-size, desktop);
+  };
+  font-family: "Nunito", Verdana, sans-serif;
+  color: $black;
+  line-height: $large-line-height;
+}
+
+h3 {
+  font-size: map-get($h3-font-size, mobile);
+  @include apply-to(md) {
+    font-size: map-get($h3-font-size, desktop);
+  }
+  font-family: "Roboto", Verdana, sans-serif;
+  color: $title-base-color;
+  font-weight: 200;
+  line-height: $large-line-height;
+}
+
+a {
+  color: $primary;
+  :hover {
+    color: $accent;
+  }
+}
+li {
+  font-size: map-get($li-font-size, mobile);
+  @include apply-to(md) {
+    font-size: map-get($li-font-size, desktop);
+  }
+}
+b {
+  font-weight: bold;
+}
+
+.primary-text {
+  color: $primary
+}

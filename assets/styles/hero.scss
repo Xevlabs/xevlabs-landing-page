@@ -1,0 +1,51 @@
+div.hero {
+  @include padding-spacing(base, horizontal);
+  @include apply-to(md) {
+    @include padding-spacing(no, horizontal);
+  }
+  height: 70vh;
+  max-height: $website-width;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  max-width: 100vw;
+  background-image: url("assets/images/home-bg.jpg");
+  background-color: #10153A;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+  min-height: 680px;
+
+  @include apply-to(md) {
+    min-height: 600px;
+  }
+  img.logo {
+    width: 7rem;
+    height: auto;
+  }
+  h1 {
+    color: $white;
+    text-align: center;
+  }
+  button.button {
+    border-radius: 50rem;
+    font-size: map-get($h3-font-size, mobile);
+    @include padding-spacing(large, horizontal);
+    @include padding-spacing(medium, vertical);
+    @include apply-to(md) {
+      font-size: map-get($h3-font-size, desktop);
+    }
+
+  }
+  img.bottom-shape {
+    position: absolute;
+    max-height: 20vh;
+    bottom: 0;
+    width: 100vw;
+  }
+}

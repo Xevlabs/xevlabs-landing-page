@@ -1,0 +1,43 @@
+@import "assets/styles/mixins/index";
+@import "assets/styles/variables";
+@import "assets/styles/container";
+@import "assets/styles/floating-image";
+@import "assets/styles/buttons";
+@import "assets/styles/footer";
+@import "assets/styles/spacing";
+@import "assets/styles/typography";
+@import "assets/styles/header";
+@import "assets/styles/hero";
+:root {
+  font-size: 100%;
+  scroll-behavior: smooth;
+
+  body {
+    font-family: 'Roboto', Verdana, sans-serif;
+    font-size: map-get($base-font-size, mobile);
+    @include apply-to(lg) {
+      font-size: map-get($base-font-size, desktop);
+    }
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    article {
+      @include padding-spacing(xlarge, top);
+    }
+
+    *,
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

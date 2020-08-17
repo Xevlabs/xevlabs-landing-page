@@ -1,0 +1,55 @@
+//Colors
+
+$primary: #ff8d6d;
+$accent: #ff7270;
+$cta-color: #ff7270;
+$cta-accent: #ff8d6d;
+$title-base-color: #fff;
+$black: #000;
+$white: #fff;
+$footer-bg-color: #160f39;
+//Spacings
+
+$no-spacing: 0;
+$spacing-small: 0.4rem;
+$spacing-base: 1rem;
+$spacing-medium: 1.5rem;
+$spacing-large: 2rem;
+$spacing-x-large: 4rem;
+$spacing-xx-large: 8rem;
+
+//Containers
+
+$quote-container-width: 60rem;
+
+//Typo
+
+$h1-font-size: (
+        mobile: 2.2rem,
+        desktop: 2.7rem
+);
+$h2-font-size: (
+        mobile: 2.5rem,
+        desktop: 3.5rem
+);;
+$h3-font-size: (
+        mobile: 1.4rem,
+        desktop: 1.4rem
+);
+$base-font-size:(
+        mobile: 1rem,
+        desktop: 1.1rem
+);
+$header-font-size: (
+        mobile: 1.5rem,
+        desktop: 1.75rem
+);
+$li-font-size: (
+        mobile: 1.1rem,
+        desktop: 1.2rem
+);
+$small-line-height: .8;
+$base-line-height: 1;
+$large-line-height: 1.2;
+
+$website-width: 1080px
